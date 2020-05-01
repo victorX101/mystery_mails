@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+*{
+    line-height: 1.6;
+    font-family: 'Noto Sans JP', sans-serif;
+    box-sizing: border-box;
+    margin : 0;
+    padding : 0;
+}
+body{
+    background-color: rgba(245, 230, 230, 0.801);
+}
+
+.block{
+    width: 60%;
+    margin: auto;
+    padding: 15px;
+    margin-top: 5%;
+    padding-left: 1px;
+    margin-bottom: 10%;
+}
+
+.Inp {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 50%;
+}
+.msg{
+    width: 90%;
+    margin-top: 20px;
+    min-width: 220px;
+    margin-bottom: 20px;
+    border:2px solid rgba(158, 153, 153, 0.575);
+    border-radius: 5px;
+}
+
+.Submit{
+    font-family: inherit;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    border: 2px solid rgba(158, 153, 153, 0.575);
+    border-radius: 10px;
+    
+}
+
+.tbox{
+    padding:6px 6px;
+    box-sizing: border-box;
+    border:2px solid rgba(158, 153, 153, 0.575);
+    border-radius: 5px;
+}
+input:focus{
+    outline: none;
+    border: 2px solid rgb(85, 179, 223);
+}
+textarea:focus{
+    outline: 0;
+    border: 2px solid rgb(85, 179, 223);
+}
+.Submit:hover{
+    outline: none;
+    background-color: rgb(104, 107, 107);
+    color: white;
+}
+.navbar {
+    background-color: black;
+    display: flex;
+}
+.list{
+    margin-left: auto;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.list li,a{
+    display: inline;
+    padding: 20px 5px 20px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgba(197, 193, 193, 0.644);
+    transition: all 0.3s ease 0s;
+    
+}
+.listresponsive li,a{
+    display: inline;
+    padding: 20px 5px 20px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgba(197, 193, 193, 0.644);
+    transition: all 0.3s ease 0s;
+    
+}
+.listresponsive{
+    margin-left: auto;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.logo{
+    padding-left: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+.list li,a:hover{
+    color: white;
+}
+.intro{
+    margin-bottom: 50px;
+    margin-left: 0;
+}
+.home{
+    color:white;
+}
+p{
+    margin-bottom: 50px;
+    font-family: inherit;
+}
+.foot{
+    background-color: rgba(46, 45, 45, 0.808);
+    text-align: center;
+    color: white;
+    padding: 10px 0 50px 0;
+    font-size: 13px;
+}
+.icon{
+    display: none;
+}
+@media screen and (max-width: 720px){
+    .list li:not(:first-child){display: none;}
+    a.icon{
+        padding-right: 20px;
+        display: block;
+    }
+}
+@media screen and (max-width: 720px) {
+    .listresponsive {position: absolute;
+    right: 0;
+    background-color: black;
+    padding: 8px;
+    width: 100%;}
+    .navbar .icon{
+        position: absolute;
+        right:  0;
+        top: 0;
+    }
+    .listresponsive a{
+      text-decoration: none;
+      padding: 5px;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .message{
+      font-size: 20px;
+      padding-top: 50px ;
+      padding-bottom: 230px;
+      text-align: center;
+  }

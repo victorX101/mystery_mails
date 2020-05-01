@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'mmails/style.css'%}">
+    <link rel="shortcut icon" href="{%static 'mmails/images/favicon.png' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/32198a8b22.js" crossorigin="anonymous"></script>
+    <title></title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="logo">MYSTERY MAIL SERVICES</a>
+        <ul class="list" id="LIST">
+            <li>
+            <a href="#" class="icon" onclick="toggle()">
+                <i class="fas fa-bars"></i>
+            </a>
+           </li>
+            <li><a class="home" href="{% url 'index' %}">Home</a></li>
+            <li><a href="http://victorx101.github.io">About me</a></li>
+            <li><a href="http://victorx101.github.io/contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="block">
+        <h1 class="message">{{ msg | linebreaks }}</h1>
+    </div>
+    <footer class="foot">For any Suggestions Please mail me at <br>mysterymailservice@gmail.com</footer>
+    <script>
+        function toggle() {
+        var x = document.getElementById("LIST");
+        if (x.className === "list") {
+        x.className += "responsive";
+        } else {
+        x.className = "list";
+            }
+        }
+    </script>
+</body>
+</html>

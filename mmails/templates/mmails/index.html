@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Mails Services</title>
+    <link rel="stylesheet" href="{%static 'mmails/style.css'%}">
+    <link rel="shortcut icon" href="{%static 'mmails/images/favicon.png' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/32198a8b22.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="logo">MYSTERY MAIL SERVICES</a>
+        <ul class="list" id="LIST">
+            <li>
+            <a href="#" class="icon" onclick="toggle()">
+                <i class="fas fa-bars"></i>
+            </a>
+           </li>
+            <li><a class="home" href="#">Home</a></li>
+            <li><a href="http://victorx101.github.io">About me</a></li>
+            <li><a href="http://victorx101.github.io/contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <form action="" method="POST">
+    {% csrf_token %}
+    <div class="block">
+        <h1 class="intro">Welcome..^_^</h1>
+        <p>Please Enter the <strong>Email-Id and Message</strong><br> below we will keep it completely Anonymous. </p>
+        <label for="{{ form.to.id_for_label }}">To :</label>
+        <div class="Inp">
+            {{ form.to }}
+        </div>
+        <label for="{{ form.subject.id_for_label }}">Subject :</label>
+        <div class="Inp">
+            {{ form.subject }}
+        </div>
+        <label for="{{ form.message.id_for_label }}">Your Message :</label>
+        <div >
+            {{ form.message }}
+        </div>
+        <input type="submit" class="Submit" value="SEND EMAIL">
+    </div>
+    </form>
+    <footer class="foot">For any Suggestions Please mail me at <br>mysterymailservice@gmail.com</footer>
+    <script>
+        function toggle() {
+        var x = document.getElementById("LIST");
+        if (x.className === "list") {
+        x.className += "responsive";
+        } else {
+        x.className = "list";
+            }
+        }
+    </script>
+</body>
+</html>
